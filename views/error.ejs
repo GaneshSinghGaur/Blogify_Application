@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <form
+      action="/blog/comment/<%= blog._id %>"
+      method="POST"
+      id="commentForm"
+      class="mt-3"
+    >
+      <div class="mb-3">
+        <textarea
+          name="content"
+          id="commentInput"
+          class="form-control"
+          placeholder="Write a comment..."
+          rows="3"
+          required
+        ></textarea>
+      </div>
+      <button type="submit" id="submitBtn" class="btn btn-primary" disabled>
+        Post Comment
+      </button>
+    </form>
+
+    <script>
+      const input = document.getElementById("commentInput");
+      const submitBtn = document.getElementById("submitBtn");
+
+      // enable button when comment is not empty
+      input.addEventListener("input", () => {
+        const value = input.value.trim();
+        submitBtn.disabled = value.length === 0;
+        rs;
+      });
+    </script>
+  </body>
+</html>
