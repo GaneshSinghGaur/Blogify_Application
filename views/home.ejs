@@ -21,6 +21,26 @@
       <% }) %>
     </div>
 
+    <footer class="footer mt-5 py-4 bg-dark text-white">
+      <div class="container text-center">
+        <div class="developer-highlight mb-2">
+          <span>🚀 Developed with ❤️ by </span>
+          <a
+            href="https://www.linkedin.com/in/sunny-rajpoot-a1ab24233/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-warning fw-bold text-decoration-none"
+          >
+            <%= developer_name || "Sunny Rajpoot" %>
+          </a>
+        </div>
+        <p class="mb-0">
+          © <%= new Date().getFullYear() %> Blogify — A Platform to Share
+          Stories ✨
+        </p>
+      </div>
+    </footer>
+
     <%- include('./partials/scripts') %>
   </body>
 </html>
