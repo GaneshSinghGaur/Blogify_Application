@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 8000;
 // mongoose.connect('mongodb://localhost:27017/blogify').then(e => console.log('MongoDB connected!!'));
 
 // for deployment:
-mongoose.connect(process.env.MONGO_URL).then(e => console.log('MongoDB connected!!'));
+mongoose.connect(process.env.MONGO_URL).then(e => console.log('MongoDB connected!!')).catch(e => console.log("MongoDB NOT Connected!!"));
 
 app.set('view engine', 'ejs');
 app.set('views', path.resolve('./views'));
