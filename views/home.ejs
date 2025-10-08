@@ -1,39 +1,26 @@
-<body>
-  <%- include('partials/nav') %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head') %>
+    <title>HomePage</title>
+  </head>
+  <body>
+    <%- include('./partials/nav.ejs') %>
 
-  <main class="container mt-3 row row-cols-4">
-    <% blogs.forEach(blog => { %>
-    <div class="col">
-      <div class="card col" style="width: 18rem">
-        <img src="<%= blog.coverImageURL %>" class="card-img-top" />
-        <div class="card-body">
-          <h5 class="card-title"><%= blog.title %></h5>
-          <a href="/blog/<%= blog._id %>" class="btn btn-primary">View</a>
+    <div class="container mt-3 row row-cols-4">
+      <% blogs.forEach(blog => { %>
+      <div class="col">
+        <div class="card col" style="width: 18rem">
+          <img src="<%= blog.coverImageURL %>" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title"><%= blog.title %></h5>
+            <a href="/blog/<%= blog._id %>" class="btn btn-primary">View</a>
+          </div>
         </div>
       </div>
+      <% }) %>
     </div>
-    <% }) %>
-  </main>
 
-  <footer class="footer mt-5 py-4 text-white">
-    <div class="container text-center">
-      <div class="developer-highlight mb-2">
-        <span>🚀 Developed with ❤️ by </span>
-        <a
-          href="https://www.linkedin.com/in/ganesh-singh-gaur-21780b23b/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-warning fw-bold text-decoration-none"
-        >
-          Ganesh ❤️ Ranjite
-        </a>
-      </div>
-      <p class="mb-0">
-        © <%= new Date().getFullYear() %> Blogify — A Platform to Share Stories
-        ✨
-      </p>
-    </div>
-  </footer>
-
-  <%- include('partials/scripts') %>
-</body>
+    <%- include('./partials/scripts') %>
+  </body>
+</html>
